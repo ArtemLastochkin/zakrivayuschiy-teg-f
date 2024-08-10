@@ -1,1 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* переменные шрифтов */
+  --font-family-main: "Inter-Variable";
+  --font-family-accent: "PressStart2P-Regular";
+  --font-weight-main: 400;
+  --font-weight-title-card: 700;
+
+  /* переменные цветов */
+  --background-color: rgba(255, 255, 255, 1);
+  --background-image: repeating-linear-gradient(
+      to right,
+      rgb(211, 211, 211, 1) 0px 2px,
+      rgb(211, 211, 211, 0) 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgb(231, 231, 231) 0px 2px,
+      rgb(211, 211, 211, 0) 2px 4px
+    ),
+    linear-gradient(to bottom, rgb(231, 231, 231) 0.01%, rgb(26, 26, 26));
+  --accent-color: rgba(0, 0, 0, 1);
+  --border: 2px solid rgba(0, 0, 0, 1);
+  --button-text-color: rgba(255, 255, 255, 1);
+  --svg-color: rgba(255, 255, 255, 1);
+  --fill-color-counter-svg: rgba(0, 0, 0, 1);
+  --fill-non-opacity-counter-svg: rgba(0, 0, 0, 0);
+  --fil-color-sparks-svg: rgba(255, 0, 0, 1);
+}

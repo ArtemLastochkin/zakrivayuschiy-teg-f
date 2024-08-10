@@ -12,3 +12,120 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* искры */
+
+.sparks {
+  opacity: 0;
+  fill: var(--fil-color-sparks-svg);
+}
+
+/* сердцевина */
+
+.core {
+  fill: var(--fill-non-opacity-counter-svg);
+}
+
+/* сердцевина ховер */
+
+.card__icon-button:hover .core {
+  fill: var(--fill-color-counter-svg);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:not(:hover) .core {
+  fill: var(--fill-non-opacity-counter-svg);
+  transition: fill 0.3s linear 0.03s;
+}
+
+/* сердцевина актив */
+
+.card__icon-button:active .core {
+  fill: var(--fil-color-sparks-svg);
+  transition: fill 0.3s linear;
+}
+
+/* основное тело */
+
+.main-body {
+  fill: var(--fill-non-opacity-counter-svg);
+}
+
+/* основное тело ховер */
+
+.card__icon-button:hover .main-body {
+  fill: var(--fill-color-counter-svg);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:not(:hover) .main-body {
+  fill: var(--fill-non-opacity-counter-svg);
+  transition: fill 0.3s linear;
+}
+
+/* основное тело актив */
+
+.card__icon-button:active .main-body {
+  fill: var(--fil-color-sparks-svg);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* кликнутая кнопка */
+
+/* закрашевание сердцевины и основного тела */
+
+.card__icon-button .is-liked .core,
+.card__icon-button .is-liked .main-body {
+  fill: var(--fil-color-sparks-svg);
+}
+
+/* закрашивание контура после клика like */
+
+.card__icon-button .is-liked .contour {
+  fill: var(--fil-color-sparks-svg);
+  transition: fill 0.3s linear 0.06s;
+}
+
+/* закрашивание контура после клика unlike */
+
+.card__icon-button .contour[fill] {
+  transition: fill 0.1s linear;
+}
+
+/* масштаб сердца клике */
+
+.card__icon-button .is-liked .heart {
+  transform: scale(1);
+  transform-origin: center;
+  animation: click-heart 0.3s ease-in 0.1s 1 backwards;
+}
+
+@keyframes click-heart {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+/* искры при клике */
+
+.card__icon-button .is-liked .sparks {
+  animation: click-sparks 0.3s ease-in 0.3s 1;
+}
+
+@keyframes click-sparks {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
