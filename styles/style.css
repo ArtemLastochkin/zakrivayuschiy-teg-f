@@ -24,25 +24,19 @@
   background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  -webkit-text-stroke: var(--accent-color);
   max-inline-size: 1440px;
   font-variation-settings: "wght" var(--font-weight-main);
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
 
-@supports (-webkit-text-stroke: var(--accent-color)) {
-  .page {
-    -webkit-text-stroke: var(--accent-color);
-  }
-}
 /* начало хедер */
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  margin-block-end: 102px;
+  gap: 24px;
+  margin-block-end: 99px;
   border: var(--border);
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 25px;
   font-family: var(--font-family-accent), "fantasy", sans-serif;
@@ -56,7 +50,6 @@
 }
 
 .header__logo-group__header-title-link {
-  margin-block-end: 20px;
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
@@ -64,9 +57,26 @@
 }
 
 .header__logo-group__header-title {
+  margin-block-start: 20px;
   font-weight: 400;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+/* кнопоки меню */
+
+.theme-menu {
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 20px;
+}
+
+.theme-menu__item {
+  text-align: left;
+}
+
+.theme-menu__item:not(:last-child) {
+  margin-block-end: 12px;
 }
 
 .theme-menu__button {
@@ -79,8 +89,6 @@
   background: none;
   transition: opacity 0.3s ease;
 }
-
-/* анимация кнопок меню */
 
 .theme-menu__button:hover,
 .theme-menu__button:disabled {
@@ -116,14 +124,12 @@
 
 .theme-menu__button:disabled::before {
   content: "▶";
+  position: absolute;
+  left: -21px;
   display: inline-block;
   width: 14px;
   height: 14px;
   animation: pseudo-cursor 0.5s ease-in-out infinite alternate;
-}
-
-.theme-menu__item:not(:last-child) {
-  margin-block-end: 12px;
 }
 
 /* начало секций */
@@ -133,8 +139,7 @@
 }
 
 .section__title {
-  min-height: 25px;
-  margin: 5px 0 0 7px;
+  margin: 5px 0 3px 13px;
   font-size: 18px;
   line-height: 21.78px;
   font-variation-settings: "wght" var(--font-weight-title-card);
@@ -148,8 +153,8 @@
 
 .section__label {
   position: absolute;
-  top: 27px;
-  right: 13px;
+  top: 25px;
+  right: 25px;
   z-index: 1;
   opacity: 50%;
   color: var(--accent-color);
@@ -162,39 +167,46 @@
   mix-blend-mode: hard-light;
 }
 
+@supports (-webkit-text-stroke: var(--background-color)) {
+  .section__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+  }
+}
+
 .section__content > img {
   height: 696px;
 }
 
-.laptop {
+.laptop__filter-blur {
   filter: blur(4px);
 }
 
-.copter {
+.copter__filter-brightness {
   filter: brightness(30%);
 }
 
-.camera {
+.camera__filter-contrast {
   filter: contrast(2);
 }
 
-.hdd {
+.hdd__filter-grayscale {
   filter: grayscale(1);
 }
 
-.camera-man {
+.camera-man__filter-sepia {
   filter: sepia(0.5);
 }
 
-.memory-card {
+.memory-card__filter-saturate {
   filter: saturate(50%);
 }
 
-.computer {
+.computer__filter-hue-rotate {
   filter: hue-rotate(180deg);
 }
 
-.img-eighth {
+.filter-mix {
   filter: hue-rotate(180deg) brightness(0.3);
 }
 
@@ -268,6 +280,10 @@ article {
   mix-blend-mode: difference;
 }
 
+.modal-window .button[onclick] .button__text {
+  text-transform: uppercase;
+}
+
 .button:focus-visible {
   box-shadow: 2px 2px 0px var(--accent-color);
   outline: none;
@@ -323,7 +339,6 @@ article {
   font-size: 14px;
   line-height: 21px;
   background-color: var(--background-color);
-  min-inline-size: 341px;
   max-inline-size: 357px;
 }
 
@@ -365,6 +380,18 @@ article {
     margin-block-end: 19px;
   }
 
+  .section__label {
+    right: 10px;
+  }
+
+  .section__content {
+    max-height: 375px;
+  }
+
+  .section__content > img {
+    height: 371px;
+  }
+
   .floppy {
     width: 28px;
     height: 28px;
@@ -378,6 +405,13 @@ article {
   }
 
   .modal-window {
-    padding: 22px;
+    padding-inline: 42px;
+    padding-block: 30px;
+    max-inline-size: 341px;
+  }
+
+  .modal-window .floppy {
+    width: 89px;
+    height: 39px;
   }
 }
