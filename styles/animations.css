@@ -13,6 +13,18 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+/* стрелка меню в хедер */
+
+@keyframes pseudo-cursor {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(4px);
+  }
+}
+
 /* искры */
 
 .sparks {
@@ -77,19 +89,19 @@
 .card__icon-button .is-liked .core,
 .card__icon-button .is-liked .main-body {
   fill: var(--fil-color-sparks-svg);
+  transition: fill 0.3s linear;
 }
 
 /* закрашивание контура после клика like */
 
 .card__icon-button .is-liked .contour {
   fill: var(--fil-color-sparks-svg);
-  transition: fill 0.3s linear 0.06s;
 }
 
 /* закрашивание контура после клика unlike */
 
 .card__icon-button .contour[fill] {
-  transition: fill 0.1s linear;
+  transition: fill 0.3s linear 0.06s;
 }
 
 /* масштаб сердца клике */
@@ -97,7 +109,7 @@
 .card__icon-button .is-liked .heart {
   transform: scale(1);
   transform-origin: center;
-  animation: click-heart 0.3s ease-in 0.1s 1 backwards;
+  animation: click-heart 0.3s ease-in alternate 0.1s 1 backwards;
 }
 
 @keyframes click-heart {
@@ -113,7 +125,7 @@
 /* искры при клике */
 
 .card__icon-button .is-liked .sparks {
-  animation: click-sparks 0.3s ease-in 0.3s 1;
+  animation: click-sparks 0.3s alternate ease-in 0.3s 1;
 }
 
 @keyframes click-sparks {

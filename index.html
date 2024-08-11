@@ -14,13 +14,22 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg" />
     <link rel="icon" href="./images/favicon-mobile.png" type="image/png" />
+    <link
+      rel="apple-touch-icon"
+      href="./images/favicon-mobile-ios.png"
+      type="image/png"
+    />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
       <div class="header__logo-group">
-        <h1 class="header__logo-group__header-title">&lt;/HTML&gt;</h1>
-        <h2 class="header__logo-group__header-title">закрывающий тег</h2>
+        <a
+          ><h1 class="header__logo-group__header-title-link">
+            &lt;/HTML&gt;
+          </h1></a
+        >
+        <h1 class="header__logo-group__header-title">закрывающий тег</h1>
       </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
@@ -51,13 +60,13 @@
     <main class="main">
       <section class="section">
         <article>
-          <h3 class="section__title">
+          <h2 class="section__title">
             Фритрек и нулевой спринт: Подготовка к работе
-          </h3>
+          </h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Заинтересованность&gt;</h4>
+            <span class="section__label">&lt;Заинтересованность&gt;</span>
             <img
-              class="img-first"
+              class="laptop"
               src="./images/samsung-memory-z1YJCZ-yV2Q-unsplash.jpg"
               alt="На столе лежит отвертка, жесткий диск M2, ноутбук без задней крышки"
             />
@@ -76,6 +85,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -106,17 +116,17 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">1 спринт: Я — чистый лист</h3>
+          <h2 class="section__title">1 спринт: Я — чистый лист</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Растерянность&gt;</h4>
+            <span class="section__label">&lt;Растерянность&gt;</span>
             <img
-              class="img-second"
+              class="copter"
               src="./images/samsung-memory-vsZAIJqQqdo-unsplash.jpg"
               alt="Человека вставляет флешка карту в квадракоптер"
             />
@@ -137,6 +147,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -167,17 +178,17 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">1 спринт: А если не получится?</h3>
+          <h2 class="section__title">1 спринт: А если не получится?</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Сомнения&gt;</h4>
+            <span class="section__label">&lt;Сомнения&gt;</span>
             <img
-              class="img-third"
+              class="camera"
               src="./images/samsung-memory-o4oYRBB1BEg-unsplash.jpg"
               alt="Фотоаппарат в руках человека, в объективе девушка"
             />
@@ -197,6 +208,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -227,17 +239,17 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">2 спринт: Погоня за идеалом</h3>
+          <h2 class="section__title">2 спринт: Погоня за идеалом</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Перфикционизм&gt;</h4>
+            <span class="section__label">&lt;Перфикционизм&gt;</span>
             <img
-              class="img-fourth"
+              class="hdd"
               src="./images/samsung-memory-eSRI3iTPkBc-unsplash.jpg"
               alt="Жесткий диск в руках человека"
             />
@@ -259,6 +271,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -289,17 +302,17 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">2 спринт: О тех, кто рядом</h3>
+          <h2 class="section__title">2 спринт: О тех, кто рядом</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Поддержка&gt;</h4>
+            <span class="section__label">&lt;Поддержка&gt;</span>
             <img
-              class="img-fiveth"
+              class="camera-man"
               src="./images/samsung-memory-_zpj6jT5s5A-unsplash.jpg"
               alt="Фотоаппарат в руках человека"
             />
@@ -319,6 +332,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -349,17 +363,17 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">3 спринт: Обходные стратегии</h3>
+          <h2 class="section__title">3 спринт: Обходные стратегии</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Абстракция&gt;</h4>
+            <span class="section__label">&lt;Абстракция&gt;</span>
             <img
-              class="img-sixth"
+              class="memory-card"
               src="./images/samsung-memory-63976YzkHqM-unsplash.jpg"
               alt="Девушка держит в руке флеш карту"
             />
@@ -380,6 +394,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -410,17 +425,17 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">3 спринт: Когда опускаются руки</h3>
+          <h2 class="section__title">3 спринт: Когда опускаются руки</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Мотивация&gt;</h4>
+            <span class="section__label">&lt;Мотивация&gt;</span>
             <img
-              class="img-seventh"
+              class="computer"
               src="./images/lasse-jensen-YhKpsFyH4AY-unsplash.jpg"
               alt="Рабочий стол с компьютером"
             />
@@ -442,6 +457,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -472,15 +488,15 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
         <article>
-          <h3 class="section__title">«Сейчас я здесь»</h3>
+          <h2 class="section__title">«Сейчас я здесь»</h2>
           <div class="section__content">
-            <h4 class="section__label">&lt;Профессионализм&gt;</h4>
+            <span class="section__label">&lt;Профессионализм&gt;</span>
             <img
               class="img-eighth"
               src="./images/janis-ringli-h0_jJxfADJg-unsplash.jpg"
@@ -505,6 +521,7 @@
             <button type="button" class="card__icon-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
                 class="like-icon"
                 width="39"
                 height="36"
@@ -535,40 +552,41 @@
                 />
               </svg>
             </button>
-            <button type="button" class="card__like-button card__button">
+            <button type="button" class="card__like-button button">
               <span class="button__text">Like</span>
             </button>
           </div>
         </article>
       </section>
-      <footer>
-        <button
-          type="button"
-          onclick="window['save-id'].showModal()"
-          aria-controls="save-id"
-          class="button-save card__button"
-        >
+
+      <button
+        type="button"
+        onclick="window['save-id'].showModal()"
+        aria-controls="save-id"
+        class="button-save button"
+      >
+        <svg class="floppy" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog id="save-id" class="modal-window">
+        <div class="modal-window__content">
           <svg class="floppy" viewBox="0 0 21 21">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <span class="button__text">Сохранить на память</span>
+          <p class="modal-window__content__text">
+            Вставьте дискету, чтобы продолжить
+          </p>
+        </div>
+        <button
+          type="button"
+          class="button"
+          onclick="window['save-id'].close()"
+        >
+          <span class="button__text">ок</span>
         </button>
-        <dialog id="save-id" class="modal-window">
-          <div class="modal-window__content">
-            <svg class="floppy" viewBox="0 0 21 21">
-              <use href="./svg/floppy.svg#floppy"></use>
-            </svg>
-            <span>Вставьте <br />дискету, чтобы продолжить</span>
-          </div>
-          <button
-            type="button"
-            class="card__button"
-            onclick="window['save-id'].close()"
-          >
-            <span class="button__text">ок</span>
-          </button>
-        </dialog>
-      </footer>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
